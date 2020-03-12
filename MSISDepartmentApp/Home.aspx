@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Home</title>
     <script src="Scripts/jquery-3.4.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -21,7 +21,7 @@
                             <h1>Cowboy Updates</h1>
                         </div>
                         <div class="col-sm-2">
-                            <asp:Button Text="Sign In" runat="server" />
+                            <asp:Button Id="BtnAction" Text="Sign In" runat="server" OnClick="BtnAction_Click" />
                         </div>
                     </div>
                 </div>
@@ -62,6 +62,11 @@
                     <hr />
                 </div>
                 <% } %>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <asp:Label ID="lblStatus" runat="server" Text=""></asp:Label>
+                </div>
             </div>
         </div>
     </form>

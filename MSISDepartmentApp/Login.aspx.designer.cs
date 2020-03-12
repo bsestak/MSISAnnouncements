@@ -11,7 +11,7 @@ namespace MSISDepartmentApp
 {
 
 
-    public partial class Home
+    public partial class Login
     {
 
         /// <summary>
@@ -24,30 +24,39 @@ namespace MSISDepartmentApp
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// BtnAction control.
+        /// tboxUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnAction;
+        protected global::System.Web.UI.WebControls.TextBox tboxUsername;
 
         /// <summary>
-        /// EventsCalender control.
+        /// tboxPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar EventsCalender;
+        protected global::System.Web.UI.WebControls.TextBox tboxPassword;
 
         /// <summary>
-        /// lblStatus control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStatus;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
+
+        /// <summary>
+        /// btnBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }

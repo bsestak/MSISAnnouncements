@@ -20,6 +20,14 @@ namespace MSISDepartmentApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if(this.IsPostBack)
+            //    Session["LoggedIn"] = 0;
+
+            //if (Session["LoggedIn"].ToString() == "0")
+            //    lblStatus.Text = "Not Logged In";
+            //else
+            //    lblStatus.Text = "Logged In";
+
             DayEvents = new List<Event>();
 
             Event E1 = new Event(1, "AITP", "This is the Description for Event 1", DateTime.Now.AddDays(5), Color.Red);
@@ -71,6 +79,11 @@ namespace MSISDepartmentApp
                     e.Cell.BackColor = MyEvent.BackColor;                    
                 }
             }
+        }
+
+        protected void BtnAction_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }
