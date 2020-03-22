@@ -22,6 +22,7 @@
                         </div>
                         <div class="col-sm-2">
                             <asp:Button Id="BtnAction" Text="Sign In" runat="server" OnClick="BtnAction_Click" />
+                            <asp:Button Id="BtnAddEvent" Text="Create Event" runat="server" OnClick="BtnAddEvent_Click" />
                         </div>
                     </div>
                 </div>
