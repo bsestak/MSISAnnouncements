@@ -17,12 +17,12 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="row jumbotron orange" >
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-md-10 head-space">
                             <h1>Cowboy Updates</h1>
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-md-2">
                             <asp:Button Id="BtnAction" Text="Sign In" runat="server" OnClick="BtnAction_Click" />
-                            <asp:Button Id="BtnAddEvent" Text="Create Event" runat="server" OnClick="BtnAddEvent_Click" />
+                            <asp:Button Id="BtnAddEvent" Text="Create Event" runat="server" OnClick="BtnAddEvent_Click" Visible="false" />
                         </div>
                     </div>
                 </div>

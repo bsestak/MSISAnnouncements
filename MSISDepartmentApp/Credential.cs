@@ -18,7 +18,9 @@ namespace MSISDepartmentApp
 
         public Credential()
         {
-            using(StreamReader r = new StreamReader(@"C:\Users\Brady\source\repos\bsestak\MSISAnnouncements\MSISDepartmentApp\Credentials.json"))
+            string root = AppDomain.CurrentDomain.BaseDirectory;
+
+            using (StreamReader r = new StreamReader(root +"Credentials.json"))
             {
                 var json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<JsonSchema>(json);

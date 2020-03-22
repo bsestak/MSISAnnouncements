@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Drawing;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace MSISDepartmentApp
 {
@@ -29,7 +30,33 @@ namespace MSISDepartmentApp
 
         }
 
-        public static List<Event> CreateEventList(SqlDataReader reader)
+        public static List<Event> GetEventList(Credential credential)
+        {
+            using (SqlConnection connection = new SqlConnection(credential.ConnectionString))
+            using (SqlCommand command = new SqlCommand("Events_Select", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@SearchType", "All");
+                command.Parameters.AddWithValue("@Value", "");
+
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        return CreateEventList(reader);
+                    }
+                    else
+                    {
+                        return new List<Event>();
+                    }
+                }
+
+            }
+        }
+
+        private static List<Event> CreateEventList(SqlDataReader reader)
         {
             List<Event> Events = new List<Event>();
 

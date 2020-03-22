@@ -13,5 +13,15 @@
     padding:1rem;
 }
 
+@media (min-width:575){
+    .head-space{
+        /*margin-left: 40%*/
+    }
+}
 
+@media (min-width:575) {
+    .head-space {
+        /*margin-left: 0%*/
+    }
+}
 

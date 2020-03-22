@@ -20,41 +20,35 @@ namespace MSISDepartmentApp
         Credential credential = new Credential();
 
         //List<Event> events = new List<Event>();
-        List<Event> Events = new List<Event>();
+        public new List<Event> Events { get; set; }
         public IEnumerable<Event> DayEvents { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            Events = new List<Event>();
+            DayEvents = new List<Event>();
 
-            //if(this.IsPostBack)
-            //    Session["LoggedIn"] = 0;
-
-            //if (Session["LoggedIn"].ToString() == "0")
-            //    lblStatus.Text = "Not Logged In";
-            //else
-            //    lblStatus.Text = "Logged In";
-
-            using(SqlConnection connection = new SqlConnection(credential.ConnectionString))
-            using (SqlCommand command = new SqlCommand("Events_Select", connection))
+            try
             {
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@SearchType", "All");
-                command.Parameters.AddWithValue("@Value", "");
-
-                connection.Open();
-
-                using(SqlDataReader reader = command.ExecuteReader())
+                if (Session["LoggedIn"].ToString() == "1")
                 {
-                    if(reader.HasRows)
-                    {
-                        Events = Event.CreateEventList(reader);
-                    }
+                    BtnAddEvent.Visible = true;
+                    BtnAction.Text = "Sign Out";
                 }
-
+                else
+                {
+                    BtnAction.Text = "Sign In";
+                    BtnAddEvent.Visible = false;
+                }
+            }
+            catch
+            {
+                Session["LoggedIn"] = "";
             }
 
-            DayEvents = new List<Event>();
+            Events = Event.GetEventList(credential);            
+
+            
 
             //Event E1 = new Event(1, "AITP", "This is the Description for Event 1", DateTime.Now.AddDays(5), Color.Red);
             //Event E2 = new Event(2, "AITP", "This is the Description for Event 2", DateTime.Now.AddDays(8), Color.Green);
@@ -111,12 +105,23 @@ namespace MSISDepartmentApp
 
         protected void BtnAction_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            if (Session["LoggedIn"].ToString() == "1")
+            {
+                BtnAddEvent.Visible = false;
+                BtnAction.Text = "Sign In";
+                Session["LoggedIn"] = "0";
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+            
         }
 
         protected void BtnAddEvent_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("NewEvent.aspx");
         }
     }
 }
