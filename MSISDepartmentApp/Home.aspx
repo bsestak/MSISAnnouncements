@@ -9,6 +9,8 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/AppCSS.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>

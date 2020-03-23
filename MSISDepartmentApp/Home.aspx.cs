@@ -28,7 +28,7 @@ namespace MSISDepartmentApp
             Events = new List<Event>();
             DayEvents = new List<Event>();
 
-            Session["LoggedIn"] = "1";
+            //Session["LoggedIn"] = "1";
 
             try
             {
@@ -98,18 +98,17 @@ namespace MSISDepartmentApp
 
         protected void EventsCalender_DayRender(object sender, DayRenderEventArgs e)
         {
-            Calendar c = sender as Calendar;
-
             foreach (Event MyEvent in Events)
             {
                 if (Convert.ToDateTime(e.Day.Date).ToShortDateString() == MyEvent.StartDate.ToShortDateString())
                 {
-                    CalendarDay d = ((DayRenderEventArgs)e).Day;
                     TableCell TC = ((DayRenderEventArgs)e).Cell;
-
+                    
                     Label L = new Label();
                     L.Text = Environment.NewLine + MyEvent.Type;
                     L.BackColor = MyEvent.BackColor;
+                    L.BorderColor = Color.Black;
+                    L.BorderStyle = BorderStyle.Solid;
 
                     TC.Controls.Add(new LiteralControl("<br />"));
                     TC.Controls.Add(L);

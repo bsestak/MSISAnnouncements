@@ -11,6 +11,7 @@
     <link href="Content/Frontier_CSS.css" rel="stylesheet" />
     <link href="Content/HW2CSS.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="manifest" href="manifest.json" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>

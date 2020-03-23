@@ -10,6 +10,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Frontier_CSS.css" rel="stylesheet" />
     <link href="Content/CreateAccount.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
