@@ -16,6 +16,8 @@ namespace MSISDepartmentApp
         public DateTime StartDate { get; set; }
         public Color BackColor{ get; set; }
 
+        private Credential credential { get; set; }
+
         public Event(int id, string type, string desc, DateTime sdate, Color color)
         {
             this.Id = id;
@@ -23,11 +25,29 @@ namespace MSISDepartmentApp
             this.Description = desc;
             this.StartDate = sdate;
             this.BackColor = color;
+
+            credential = new Credential();
         }
 
         public Event()
         {
+            credential = new Credential();
+        }
 
+        public void InsertEvent(Event e)
+        {
+            using (SqlConnection connection = new SqlConnection(credential.ConnectionString))
+            using (SqlCommand command = new SqlCommand("NewEvent_Insert", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Type", e.Type);
+                command.Parameters.AddWithValue("@Description", e.Description);
+                command.Parameters.AddWithValue("@Date", e.StartDate);
+                command.Parameters.AddWithValue("@Color", e.BackColor.Name);
+                connection.Open();
+                command.ExecuteReader();                
+
+            }
         }
 
         public static List<Event> GetEventList(Credential credential)
@@ -70,7 +90,7 @@ namespace MSISDepartmentApp
                     e.Type = reader["Type"].ToString();
                     e.Description = reader["Description"].ToString();
                     e.StartDate = Convert.ToDateTime(reader["Date"].ToString());
-                    e.BackColor = Color.Blue;
+                    e.BackColor = ColorTranslator.FromHtml("#" + reader["Color"].ToString());
                     //e.Type = reader["Type"].ToString();
 
                     Events.Add(e);

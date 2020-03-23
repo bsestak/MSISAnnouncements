@@ -15,8 +15,43 @@
     <form id="form1" runat="server">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-
+                <div class="col-sm-6">
+                    <label>Type</label>
+                </div>
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtBoxType" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Description</label>
+                </div>
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtBoxDesc" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Date</label>
+                </div>
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txtBoxDate" runat="server" TextMode="DateTimeLocal"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Color</label>
+                </div>
+                <div class="col-sm-6">
+                    <asp:TextBox ID="txboxColor" runat="server" TextMode="Color"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Color</label>
+                </div>
+                <div class="col-sm-6">
+                    <asp:Button ID="btnCreate" Text="Create" runat="server" OnClick="btnCreate_Click"/>
                 </div>
             </div>
         </div>

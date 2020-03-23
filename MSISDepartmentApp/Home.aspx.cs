@@ -28,6 +28,8 @@ namespace MSISDepartmentApp
             Events = new List<Event>();
             DayEvents = new List<Event>();
 
+            Session["LoggedIn"] = "1";
+
             try
             {
                 if (Session["LoggedIn"].ToString() == "1")
@@ -80,6 +82,20 @@ namespace MSISDepartmentApp
 
         }
 
+        //protected void EventsCalender_DayRender(object sender, DayRenderEventArgs e)
+        //{
+        //    CalendarDay d = ((DayRenderEventArgs)e).Day;
+        //    TableCell c = ((DayRenderEventArgs)e).Cell;
+
+        //    if (!d.IsOtherMonth)
+        //    {
+        //        foreach (Event MyEvent in Events)
+        //        {
+        //            c.Controls.Add(new LiteralControl(Environment.NewLine + MyEvent.Type));
+        //        }
+        //    }
+        //}
+
         protected void EventsCalender_DayRender(object sender, DayRenderEventArgs e)
         {
             Calendar c = sender as Calendar;
@@ -88,6 +104,17 @@ namespace MSISDepartmentApp
             {
                 if (Convert.ToDateTime(e.Day.Date).ToShortDateString() == MyEvent.StartDate.ToShortDateString())
                 {
+                    CalendarDay d = ((DayRenderEventArgs)e).Day;
+                    TableCell TC = ((DayRenderEventArgs)e).Cell;
+
+                    Label L = new Label();
+                    L.Text = Environment.NewLine + MyEvent.Type;
+                    L.BackColor = MyEvent.BackColor;
+
+                    TC.Controls.Add(new LiteralControl("<br />"));
+                    TC.Controls.Add(L);
+
+                    //TC.Controls.Add(new LiteralControl("\r\n\r\n" + MyEvent.Type));
                     //HtmlAnchor anchor = new HtmlAnchor();
 
                     //anchor.InnerHtml = "<br/>" + MyEvent.Type;
@@ -98,7 +125,7 @@ namespace MSISDepartmentApp
                     //e.Cell.Controls.Add(anchor);
 
                     //e.Cell.Text = e.Day.DayNumberText + "<br/>" + MyEvent.Type;
-                    e.Cell.BackColor = MyEvent.BackColor;                    
+                    //e.Cell.BackColor = MyEvent.BackColor;
                 }
             }
         }
