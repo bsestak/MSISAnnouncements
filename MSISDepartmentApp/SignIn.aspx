@@ -5,19 +5,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Sign In</title>
-    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <%--    <script src="Scripts/jquery-3.4.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/Frontier_CSS.css" rel="stylesheet" />
-    <link href="Content/HW2CSS.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />--%>
+    <script src="../Scripts/jquery-3.4.1.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="manifest" href="manifest.json" />
+    <link href="Content/OSU1.css" rel="stylesheet" />
+    <link href="Content/OSU2.css" rel="stylesheet" />
+    <link href="Content/OSU3.css" rel="stylesheet" />
+    <link href="Content/OSU4.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class=" container-float">
+        <div class="container nopadding">
+            <div class="row">
+                <div class="col-sm-12 nopadding">
+                    <nav class="navbar navbar-expand-md cust-navbar fixed-top container">
+                        <!-- Brand -->
+                        <a class="navbar-brand" href="HOME.aspx">
+                            <img src="images/OSULogo.png" class="logo2"/>
+                        </a>
+
+                        <!-- Toggler/collapsibe Button -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Navbar links -->
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">                            
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <%if (Params.IsLoggedIn)
+                                        { %>
+                                    <a class="nav-link nav-text-color" id="AdminLink" href="SignOut.aspx">Sign Out</a>
+                                    <% }
+                                        else
+                                        { %>
+                                    <a class="nav-link nav-text-color" id="LoginLink" href="SignIn.aspx">Sign In</a>
+                                    <%} %>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="content-space"></div>
             <div class="container-cust">
                 <div class=" row boxborder">
                     <div class="col-sm-12 margin-remove login-container">
@@ -70,13 +111,13 @@
                         <%-- Cerate account button --%>
                         <div class="row">
                             <div class="col-sm-12">
-                                <asp:Button CssClass="block" ID="btnCreateAccount" runat="server" Text="Create Account" OnClick="btnCreateAccount_Click" CausesValidation="false" />
+                                <asp:Button CssClass="block" ID="btnAccount" runat="server" Text="Create Account" OnClick="btnAccount_Click" CausesValidation="false" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
     </form>
 </body>
 </html>

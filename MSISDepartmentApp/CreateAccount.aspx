@@ -8,9 +8,12 @@
     <script src="Scripts/jquery-3.0.0.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/Frontier_CSS.css" rel="stylesheet" />
-    <link href="Content/CreateAccount.css" rel="stylesheet" />
-    <link rel="manifest" href="manifest.json"/>
+
+    <link href="Content/OSU1.css" rel="stylesheet" />
+    <link href="Content/OSU2.css" rel="stylesheet" />
+    <link href="Content/OSU3.css" rel="stylesheet" />
+    <link href="Content/OSU4.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>

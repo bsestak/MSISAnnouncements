@@ -22,54 +22,21 @@ namespace MSISDepartmentApp
         //List<Event> events = new List<Event>();
         public new List<Event> Events { get; set; }
         public IEnumerable<Event> DayEvents { get; set; }
+        public SessionParams Params { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Params = Session["Params"] as SessionParams;
+
+            if (Params == null)
+            {
+                Params = new SessionParams();
+            }
+
             Events = new List<Event>();
-            DayEvents = new List<Event>();
-
-            //Session["LoggedIn"] = "1";
-
-            try
-            {
-                if (Session["LoggedIn"].ToString() == "1")
-                {
-                    BtnAddEvent.Visible = true;
-                    BtnAction.Text = "Sign Out";
-                }
-                else
-                {
-                    BtnAction.Text = "Sign In";
-                    BtnAddEvent.Visible = false;
-                }
-            }
-            catch
-            {
-                Session["LoggedIn"] = "";
-            }
-
+            DayEvents = new List<Event>();           
             Events = Event.GetEventList(credential);            
 
-            
-
-            //Event E1 = new Event(1, "AITP", "This is the Description for Event 1", DateTime.Now.AddDays(5), Color.Red);
-            //Event E2 = new Event(2, "AITP", "This is the Description for Event 2", DateTime.Now.AddDays(8), Color.Green);
-            //Event E3 = new Event(3, "AITP", "This is the Description for Event 3", DateTime.Now.AddDays(12), Color.Yellow);
-            //Event E4 = new Event(4, "AITP", "This is the Description for Event 4", DateTime.Now.AddDays(13), Color.Green);
-            //Event E5 = new Event(5, "AITP", "This is the Description for Event 5", DateTime.Now.AddDays(20), Color.Blue);
-            //Event E6 = new Event(6, "AITP", "This is the Description for Event 6", DateTime.Now.AddDays(20), Color.Blue);
-
-            //events.Add(E1);
-            //events.Add(E2);
-            //events.Add(E3);
-            //events.Add(E4);
-            //events.Add(E5);
-            //events.Add(E6);
-            //events.Add(E6);
-            //events.Add(E6);
-            //events.Add(E6);
-            //events.Add(E6);
-            //events.Add(E6);
         }
 
         protected void EventsCalender_SelectionChanged(object sender, EventArgs e)
@@ -81,20 +48,6 @@ namespace MSISDepartmentApp
 
 
         }
-
-        //protected void EventsCalender_DayRender(object sender, DayRenderEventArgs e)
-        //{
-        //    CalendarDay d = ((DayRenderEventArgs)e).Day;
-        //    TableCell c = ((DayRenderEventArgs)e).Cell;
-
-        //    if (!d.IsOtherMonth)
-        //    {
-        //        foreach (Event MyEvent in Events)
-        //        {
-        //            c.Controls.Add(new LiteralControl(Environment.NewLine + MyEvent.Type));
-        //        }
-        //    }
-        //}
 
         protected void EventsCalender_DayRender(object sender, DayRenderEventArgs e)
         {
@@ -131,16 +84,16 @@ namespace MSISDepartmentApp
 
         protected void BtnAction_Click(object sender, EventArgs e)
         {
-            if (Session["LoggedIn"].ToString() == "1")
-            {
-                BtnAddEvent.Visible = false;
-                BtnAction.Text = "Sign In";
-                Session["LoggedIn"] = "0";
-            }
-            else
-            {
-                Response.Redirect("SignIn.aspx");
-            }
+            //if (Session["LoggedIn"].ToString() == "1")
+            //{
+            //    BtnAddEvent.Visible = false;
+            //    BtnAction.Text = "Sign In";
+            //    Session["LoggedIn"] = "0";
+            //}
+            //else
+            //{
+            //    Response.Redirect("SignIn.aspx");
+            //}
 
             
         }

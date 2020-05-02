@@ -1,0 +1,226 @@
+﻿.jumbo{
+    background-color:darkgray;
+    margin:0rem;
+}
+/*navbar logo*/
+.logo {
+    height:105rem;
+    width:105em;
+}
+
+.logo2{
+    height:8rem;
+    width:8rem;
+}
+
+.home-img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.contact-text{
+    margin:.5rem;
+}
+.contact-lablel * {
+    text-align:right;
+    margin:.5rem;
+}
+
+.emp-card{
+    padding:3rem;
+}
+
+.line {
+    border: .25rem solid #d3af37;
+    border-radius: 5px;
+}
+
+.about-text{
+    background-color:lightgray;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+}
+
+.btn-centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.remove-margin{
+    margin:0rem;
+    padding:0rem;
+}
+
+.white {
+    /*background-color: white;*/
+    color: #d3af37;
+}
+
+.red {
+    background-color: #d3af37;
+}
+
+.carousel-text {
+    color: #d3af37;
+    font-weight:bolder;
+    font-size:3rem;
+    align-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.email-border{
+    border-style:solid;
+    border-color:black;
+}
+
+/*.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}*/
+
+.card{
+    max-width:50%;
+    max-height:50%;
+    text-align:center;
+}
+
+.white{    
+    color:white;
+    font-weight:bold;
+}
+.MessageBox{
+    width:100%;
+}
+
+.Cust-Footer {
+    background-color: #d3af37;
+    padding: 1rem;
+    opacity: 1;
+    text-align: center;
+    word-spacing: 5px;
+    color: white;
+    margin-top: 1rem;
+}
+
+.left-padding-delete{
+    padding-left:0rem;
+}
+
+.right-padding-delete {
+    padding-right: 0rem;
+}
+
+.black{
+    color:black;
+}
+
+.nopadding
+{
+    padding:0rem;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    right:0;
+    left: 0;
+    z-index: 1030;
+    top: 0;
+}
+
+.content-space{
+    padding-top:10rem;
+}
+
+.img-rounded {
+    height: 20rem;
+    width: 20em;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    padding: 0rem;
+    border: solid;
+    object-fit: fill;
+}
+
+.title-center{
+    text-align:center;
+}
+
+.Submit-margin{
+    padding-bottom:1rem;
+}
+
+.gray {
+    background-color: #A9A9A9;
+}
+
+.info-text {
+    font-size: 1.5rem;
+    /*color: white;*/
+    color: #d3af37;
+    font-weight: 500;
+    text-align:center;
+}
+
+.header-text {
+    /*color: #d3af37;*/
+    color:black;
+    text-align: center;
+    margin: 1rem;
+    font-weight:800;
+}
+
+.notop{
+    margin:0rem;
+}
+
+.nomargin{
+    margin:0;
+}
+
+.right-margin{
+    margin-right:0rem;
+    margin-left:1rem;
+    margin-top:0rem;
+    margin-bottom:0rem;
+}
+
+.cust-navbar {
+    background-color: #404040;
+    
+}
+
+.nav-text-color{
+    color: white;
+    font-weight:bolder;
+    font-size:1.5rem;
+} 
+
+.comment-show{
+    visibility: hidden;
+}
+
+.larger-checkbox input {
+    width: 25px;
+    height: 25px;
+}
+
+

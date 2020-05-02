@@ -9,41 +9,46 @@ namespace MSISDepartmentApp
 {
     public partial class SignIn : System.Web.UI.Page
     {
+        public SessionParams Params { get; set; }
+        public Credential creds { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            creds = new Credential();
 
+            Params = Session["Params"] as SessionParams;
+
+            if (Params == null)
+            {
+                Params = new SessionParams();
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Credential c = new Credential();
-
-            MSISUser User = MSISUser.GetUser(c,tboxUsername.Text);
-
+            MSISUser User = MSISUser.GetUser(creds, tboxUsername.Text);
             string HashPassword = Crypto.CreateHash(tboxPassword.Text, User.Salt);
-            
+
             if(User.Password == HashPassword)
             {
-                List<string> NewHash = new List<string>();
+                SessionParams Params = Session["Params"] as SessionParams;
 
-                Session["LoggedIn"] = 1;
+                if(Params == null)
+                {
+                    Params = new SessionParams();
+                }
+
+                Params.IsLoggedIn = true;
+                Params.User = User;
+                Session["Params"] = Params;
+
                 Response.Redirect("Home.aspx");
-            }
-
-
-            if (tboxUsername.Text == "validuser" && tboxPassword.Text == "password")
-            {
-                Response.Redirect("~/SuccessPage.aspx");
-            }
-            else
-            {
-                lblError.Text = "Invalid Credentials";
             }
         }
 
-        protected void btnCreateAccount_Click(object sender, EventArgs e)
+        protected void btnAccount_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/CreateAccount.aspx");
+            Response.Redirect("Account.aspx");
         }
     }
 }

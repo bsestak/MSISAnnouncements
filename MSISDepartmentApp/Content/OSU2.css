@@ -14,9 +14,9 @@
     margin:5rem;
     
 }
-h1{
-    font-weight:bold;
-    color:#AC3227;
+h1 {
+    font-weight: bold;
+    color: #Fe5c00;
 }
 
 p {
@@ -47,19 +47,19 @@ p {
 }
 
 .block {
+    background-color: #Fe5c00;
     display: block;
     width: 100%;
     border: none;
-    background-color: #AC3227;
     padding: .5rem;
     font-size: 16px;
     cursor: pointer;
     text-align: center;
-    margin-top:1rem;
-    border-radius:1rem;
-    color:white;
-    font-size:large;
-    font-weight:bold;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: large;
+    font-weight: bold;
 }
 
 .login-header {
@@ -77,4 +77,12 @@ p {
 
 .icon-cust{
     margin:1rem;
+}
+
+.yellow {
+    background-color: #d3af37;
+}
+
+.orange {
+    background-color: #Fe5c00;
 }
