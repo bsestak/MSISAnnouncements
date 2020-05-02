@@ -1,9 +1,10 @@
 {
   "name": "Cowboy Updates",
   "short_name": "Cowboy Updates",
-  "start_url": ".",
+  "start_url": "/Home.aspx",
   "display": "standalone",
-  "background_color": "#fff",
+  "background_color": "#FFE9D2",
+  "theme_color": "#FFE1C4",
   "description": "MSIS Accouncements App",
   "icons": [
     {
