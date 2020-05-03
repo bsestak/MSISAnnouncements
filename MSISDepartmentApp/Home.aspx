@@ -67,18 +67,18 @@
             </div>--%>
             <div class="row">
                 <div class="col-sm-12 span-viewport">
-                    <asp:Calendar ID="EventsCalender" class="span-viewport" runat="server" BackColor="#FFFFCC"
-                        BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest"
-                        Font-Names="Verdana" Font-Size="12pt" ForeColor="#663399"
+                    <asp:Calendar ID="EventsCalender" class="span-viewport" runat="server" BackColor="#C8C8C8"
+                        BorderColor="#000000" BorderWidth="1px" DayNameFormat="Shortest"
+                        Font-Names="Verdana" Font-Size="12pt" ForeColor="#000000"
                         OnDayRender="EventsCalender_DayRender" ShowGridLines="True" OnSelectionChanged="EventsCalender_SelectionChanged">
-                        <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" />
+                        <DayHeaderStyle BackColor="#Fe5c00" Font-Bold="True" />
                         <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
                         <OtherMonthDayStyle ForeColor="#CC9966" />
-                        <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
+                        <SelectedDayStyle BackColor="#Fe5c00" Font-Bold="True" />
                         <SelectorStyle BackColor="#FFCC66" />
-                        <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt"
+                        <TitleStyle BackColor="#Fe5c00" Font-Bold="True" Font-Size="15pt"
                             ForeColor="#FFFFCC" />
-                        <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
+                        <TodayDayStyle BackColor="#707070" ForeColor="White" />
                     </asp:Calendar>
                     <%--                    <asp:Calendar class="span-viewport" ID="EventsCalender" runat="server" OnSelectionChanged="EventsCalender_SelectionChanged" OnDayRender="EventsCalender_DayRender"></asp:Calendar>--%>
                 </div>
