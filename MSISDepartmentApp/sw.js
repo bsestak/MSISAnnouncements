@@ -1,4 +1,4 @@
-﻿const staticCacheName = 'site-static-V1';
+﻿const staticCacheName = 'site-static-V2';
 const assets = [
     '/Home.aspx',
     '/Account.aspx',

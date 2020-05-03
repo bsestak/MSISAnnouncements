@@ -109,7 +109,6 @@
     <Content Include="Content\OSU2.css" />
     <Content Include="Content\OSU3.css" />
     <Content Include="Content\OSU4.css" />
-    <Content Include="CreateAccount.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="images\OSULogo.png" />
     <Content Include="images\OSU_Icon_192.png" />
@@ -143,8 +142,8 @@
     <Content Include="Credentials.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="manifest.webmanifest" />
     <None Include="manifest.json" />
+    <None Include="Properties\PublishProfiles\MSISDepartmentApp20200502075524 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -243,13 +242,6 @@
     </Compile>
     <Compile Include="Account.aspx.designer.cs">
       <DependentUpon>Account.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CreateAccount.aspx.cs">
-      <DependentUpon>CreateAccount.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CreateAccount.aspx.designer.cs">
-      <DependentUpon>CreateAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="Credential.cs" />
     <Compile Include="Crypto.cs" />

@@ -14,7 +14,8 @@
     <link href="Content/OSU2.css" rel="stylesheet" />
     <link href="Content/OSU3.css" rel="stylesheet" />
     <link href="Content/OSU4.css" rel="stylesheet" />
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="/manifest.webmanifest"/>
+    <%--<link rel="manifest" href="manifest.json" />--%>
     <%-- IOS support --%>
     <link rel="apple-touch-icon" href="/images/OSU_Icon_192.png" />
     <meta name="apple-moblie-web-app-status-bar" content="#AA7700" />
@@ -63,6 +64,7 @@
                 </div>
             </div>--%>
             <div class="row">
+                <h1>Cowboy Updates</h1>
                 <div class="col-sm-12 span-viewport">
                     <asp:Calendar ID="EventsCalender" class="span-viewport" runat="server" BackColor="#FFFFCC"
                         BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest"
