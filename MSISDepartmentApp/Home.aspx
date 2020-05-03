@@ -14,12 +14,13 @@
     <link href="Content/OSU2.css" rel="stylesheet" />
     <link href="Content/OSU3.css" rel="stylesheet" />
     <link href="Content/OSU4.css" rel="stylesheet" />
-    <link rel="manifest" href="/manifest.webmanifest"/>
-    <%--<link rel="manifest" href="manifest.json" />--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="manifest" href="manifest.json" />
     <%-- IOS support --%>
     <link rel="apple-touch-icon" href="/images/OSU_Icon_192.png" />
     <meta name="apple-moblie-web-app-status-bar" content="#AA7700" />
-    <meta name="theme-color" content="#FFE1C4"/>
+    <meta name="theme-color" content="#FFE1C4" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -28,10 +29,11 @@
         <div class="container nopadding">
             <div class="row">
                 <div class="col-sm-12 nopadding">
-                    <nav class="navbar navbar-expand-md cust-navbar fixed-top container">
+                    <nav class="navbar navbar-expand-md navbar-dark cust-navbar fixed-top container">
+                <%--<nav class="navbar navbar-expand-md bg-dark navbar-dark navbar-fixed-top container">--%>
                         <!-- Brand -->
                         <a class="navbar-brand" href="HOME.aspx">
-                            <img src="images/OSULogo.png" class="logo2"/>
+                            <img src="images/OSULogo.png" class="logo2" />
                         </a>
 
                         <!-- Toggler/collapsibe Button -->
@@ -64,7 +66,6 @@
                 </div>
             </div>--%>
             <div class="row">
-                <h1>Cowboy Updates</h1>
                 <div class="col-sm-12 span-viewport">
                     <asp:Calendar ID="EventsCalender" class="span-viewport" runat="server" BackColor="#FFFFCC"
                         BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest"

@@ -1,10 +1,11 @@
-﻿const staticCacheName = 'site-static-V2';
+﻿const staticCacheName = 'site-static-V5';
 const assets = [
-    '/Home.aspx',
-    '/Account.aspx',
-    '/SignIn.aspx',
-    '/SignOut.aspx',
-    '/NewEvent.aspx',
+    //'/Home.aspx',
+    //'/Account.aspx',
+    //'/SignIn.aspx',
+    //'/SignOut.aspx',
+    //'/NewEvent.aspx',
+    '/Offline.aspx',
     '/Scripts/app.js',
     '/Content/AppCSS.css',
     '/Content/OSU1.css',
@@ -14,7 +15,8 @@ const assets = [
     '/Scripts/jquery-3.4.1.min.js',
     '/Scripts/bootstrap.min.js',
     '/Content/bootstrap.min.css',
-    '/images/OSULogo.png'
+    '/images/OSULogo.png',
+    '/images/PeteOffline.png'
 ];
 
 
@@ -44,6 +46,6 @@ self.addEventListener('fetch', evt => {
     evt.respondWith(
         caches.match(evt.request).then(cacheRes => {
             return cacheRes || fetch(evt.request);
-        })
+        }).catch(() => caches.match('/Offline.aspx'))
     )
 });

@@ -28,7 +28,7 @@
         <div class="container nopadding">
             <div class="row">
                 <div class="col-sm-12 nopadding">
-                    <nav class="navbar navbar-expand-md cust-navbar fixed-top container">
+                    <nav class="navbar navbar-expand-md navbar-dark cust-navbar fixed-top container">
                         <!-- Brand -->
                         <a class="navbar-brand" href="HOME.aspx">
                             <%--<img src="../images/Cookie%20Street%20Logo.jpg" class="logo" />--%>
