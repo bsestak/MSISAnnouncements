@@ -1,6 +1,6 @@
 {
   "name": "Cowboy Updates",
-  "short_name": "Cowboy Updates",
+  "short_name": "CowboyUpdates",
   "start_url": "/Home.aspx",
   "display": "standalone",
   "background_color": "#FFE9D2",
