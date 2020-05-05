@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account.aspx" />
+    <Content Include="APP_READ_ME.txt" />
     <Content Include="Content\AppCSS.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -224,6 +225,13 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="SignIn.aspx" />
     <Content Include="SignOut.aspx" />
+    <Content Include="SQLDBScripts\Proc_Event_Insert.sql" />
+    <Content Include="SQLDBScripts\Proc_Event_Select.sql" />
+    <Content Include="SQLDBScripts\Proc_User_Insert.sql" />
+    <Content Include="SQLDBScripts\Proc_User_Select.sql" />
+    <Content Include="SQLDBScripts\Proc_User_Update.sql" />
+    <Content Include="SQLDBScripts\Table_Create_Events.sql" />
+    <Content Include="SQLDBScripts\Table_Create_User.sql" />
     <Content Include="sw.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />

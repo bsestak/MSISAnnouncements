@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <link rel="manifest" href="manifest.json" />
-        <%-- IOS support --%>
+    <%-- IOS support --%>
     <link rel="apple-touch-icon" href="/images/OSU_Icon_192.png" />
-    <meta name="apple-moblie-web-app-status-bar" content="#AA7700" />
-    <meta name="theme-color" content="#FFE1C4"/>
+    <meta name="apple-moblie-web-app-status-bar" content="#Fe5c00" />
+    <meta name="theme-color" content="#Fe5c00" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>

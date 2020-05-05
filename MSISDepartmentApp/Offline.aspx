@@ -17,8 +17,8 @@
     <link rel="manifest" href="manifest.json" />
     <%-- IOS support --%>
     <link rel="apple-touch-icon" href="/images/OSU_Icon_192.png" />
-    <meta name="apple-moblie-web-app-status-bar" content="#AA7700" />
-    <meta name="theme-color" content="#FFE1C4" />
+    <meta name="apple-moblie-web-app-status-bar" content="#Fe5c00" />
+    <meta name="theme-color" content="#Fe5c00" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
